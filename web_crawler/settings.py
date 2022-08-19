@@ -7,6 +7,9 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
+import os
+
+
 BOT_NAME = 'web_crawler'
 
 SPIDER_MODULES = ['web_crawler.spiders']
@@ -86,3 +89,9 @@ ROBOTSTXT_OBEY = True
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+# MONGO DB SETTINGS
+MONGO_HOST=os.environ.get("MONGO_HOST")
+MONGO_PORT=os.environ.get("MONGO_HOST")
+MONGO_DB_NAME=os.environ.get("MONGO_DB_NAME")
+MONGO_COLLECTION_NAME=os.environ.get("MONGO_COLLECTION_NAME")

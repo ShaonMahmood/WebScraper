@@ -4,6 +4,8 @@ services:
   app:
     build: ./
     container_name: crawler_app
+    env_file:
+      - .env
     depends_on:
       - mongodb
 
