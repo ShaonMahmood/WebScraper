@@ -6,7 +6,8 @@
 import scrapy
 
 
-class WebCrawlerItem(scrapy.Item):
+class EbayProductItem(scrapy.Item):
     # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    product_name = scrapy.Field()
+    price = scrapy.Field()
+    product_url = scrapy.Field()
