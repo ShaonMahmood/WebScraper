@@ -1,4 +1,4 @@
-A simple scarping system build with Python
+A simple scraping system build with Python
 =================
 
 **Tested on MacOS(m1)**
