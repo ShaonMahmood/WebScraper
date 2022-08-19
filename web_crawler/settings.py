@@ -91,7 +91,11 @@ ROBOTSTXT_OBEY = True
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
 # MONGO DB SETTINGS
-MONGO_HOST=os.environ.get("MONGO_HOST")
-MONGO_PORT=os.environ.get("MONGO_HOST")
-MONGO_DB_NAME=os.environ.get("MONGO_DB_NAME")
-MONGO_COLLECTION_NAME=os.environ.get("MONGO_COLLECTION_NAME")
+MONGO_HOST = os.environ.get("MONGO_HOST")
+MONGO_PORT = os.environ.get("MONGO_HOST")
+MONGO_DB_NAME = os.environ.get("MONGO_DB_NAME")
+MONGO_COLLECTION_NAME = os.environ.get("MONGO_COLLECTION_NAME")
+
+ITEM_PIPELINES = {
+  "web_crawler.pipelines.WebCrawlerPipeline": 500
+}
